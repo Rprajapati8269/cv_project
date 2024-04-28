@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Matching using SIFT Algorithm</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #9CC3D5FF;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            background-color: #0063B2FF;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .team-members {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .team-member {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #0063B2FF;
+            color: #fff;
+            border-radius: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .team-member:hover {
+            transform: translateY(-3px);
+            background-color: #005090FF;
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #0063B2FF;
+            margin-bottom: 20px;
+        }
+        .section p {
+            color: #333;
+            font-size: 16px;
+        }
+        .project-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .project-info a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background-color: #0063B2FF;
+            transition: background 0.3s ease-in-out;
+            font-size: 18px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .project-info a:hover {
+            background-color: #005090FF;
+            transform: translateY(-3px);
+        }
+        footer {
+            background-color: #0063B2FF;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            font-size: 18px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Image Matching using SIFT Algorithm</h1>
+        </div>
+        <div class="team-members">
+            <div class="team-member">Rahul K. Prajapati</div>
+            <div class="team-member">Ashish Kumar</div>
+            <div class="team-member">Gaurav Rawal</div>
+            <div class="team-member">Abhishek Kumar</div>
+        </div>
+        <div class="section">
+            <h2>Project Information</h2>
+            <div class="project-info">
+                <a href="https://www.overleaf.com/read/ppsmvyxxhdfg#8b0ddc">Report</a>
+                <a href="https://colab.research.google.com/drive/1jYSgPq7JYMNWrzWrj50svemvgGjZpktL?usp=sharing">Demo code</a>
+                <a href="https://github.com/Abhishekkumar200/Image-Matching-using-SIFT-Algorithm">Github link</a>
+                <a href="https://youtu.be/MKgYl6fC6os">2-3 min video</a>
+                <a href="https://youtu.be/XpTFIafBpKg">5-10 min Video</a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Abstract</h2>
+            <p> With the use of the Oriented BRIEF (ORB), Object Binary Descriptor (OBD), and Scale-
+                Invariant Feature Transform (SIFT), this study presents a clear approach to picture match-
+                ing. Robust feature extraction is made possible by SIFT, computational efficiency is pro-
+                vided by ORB, and further discriminative capability is provided by OBD. Bounding box
+                annotation is used to establish object localization, which improves the understanding of
+                the results. The approach’s effectiveness in recognizing similar objects across photos with
+                low computational complexity is demonstrated by experimental validation
+            </p>
+        </div>
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>This research introduces a framework for image matching, combining three algorithms:
+               Object Binary Descriptor (OBD), Oriented BRIEF (ORB), and Scale-Invariant Feature Transform (SIFT). 
+               It addresses challenges like viewpoint changes and occlusions, providing reliable matching and efficient computation. 
+               The framework includes object localization with bounding boxes for visual clarity. 
+               Evaluation on benchmark datasets demonstrates its resilience, accuracy, and computational efficiency,
+               making it applicable across various computer vision applications.
+             </p>
+        </div>
+        <div class="section">
+            <h2>Methods used</h2>
+            <p><p>1.SIFT(Scale-Invariant Feature Transform)   </p>
+                <p>2.BRIEF (Binary Robust Independent Elementary Features) Descriptor </p>
+                <p>3.ORB (Oriented FAST and Rotated BRIEF) Descriptor </p>
+                <p>4.Object Localization </p>
+                
+        </div>
+
+        
+        </div>
+
+        <footer>
+            <p>Made with <span style="color: #9CC3D5FF;">&#9733;</span> by Rahul K. Prajapati @2024</p>
+            <p>Contact: <span style="margin-left: 5px;"><a href="mailto:prajapati.2@iitj.ac.in">prajapati.2@iitj.ac.in</a></span></p>
+        </footer>
+        
+    </div>
+</body>
+</html>
